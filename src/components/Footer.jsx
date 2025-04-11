@@ -1,4 +1,4 @@
-import Logo from "../assets/logo.png";
+import Logo from "../assets/images/et_logo.png";
 export const Footer = () => {
   return (
      
