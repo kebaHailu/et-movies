@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 
-export const useFetch = (url) => {
+export const useFetch = (api_path,queryTerm="") => {
+  const apiKey = import.meta.env.VITE_API_KEY;
+  console.log(apiKey)
   const [data, setData] = useState([]);
-  const base_url = `https://api.themoviedb.org/3/${url}?api_key=0419218df2164cdf1a6de78c38908643`;
+  const base_url = `https://api.themoviedb.org/3/${api_path}?api_key=${apiKey}&query=${queryTerm}`;
 
   useEffect(() => {
     async function fetchMovies() {
@@ -11,6 +13,6 @@ export const useFetch = (url) => {
       setData(json.results);
     }
     fetchMovies();
-  }, [url]);
+  }, [api_path]);
   return { data };
 };
