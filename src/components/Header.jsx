@@ -21,7 +21,7 @@ export const Header = () => {
     event.preventDefault();
     const searchTerm = event.target.search.value;
     event.target.reset();
-    navigate(`search?q=${searchTerm}`);
+    return navigate(`search?q=${searchTerm}`);
 
   }
   const activeClass =
