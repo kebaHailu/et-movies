@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 export const useFetch = (api_path,queryTerm="") => {
   const apiKey = import.meta.env.VITE_API_KEY;
-  console.log(apiKey)
   const [data, setData] = useState([]);
   const base_url = `https://api.themoviedb.org/3/${api_path}?api_key=${apiKey}&query=${queryTerm}`;
 
