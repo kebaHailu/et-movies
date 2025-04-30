@@ -6,6 +6,8 @@ export const Search = ({apiPath}) => {
   const [searchParams] = useSearchParams();
   const queryTerm = searchParams.get("q");
   const { data: movies } = useFetch(apiPath,queryTerm);
+
+  document.title = `search result for ${queryTerm}`
   return (
     <main>
       <section className="max-w-7xl mx-auto py-7">
