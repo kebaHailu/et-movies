@@ -67,11 +67,6 @@ html
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-```bash
-   npm run build
-   # or
-   yarn build
-```
 Project Structure
 ```
 project-root/
